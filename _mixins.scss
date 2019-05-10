@@ -1,0 +1,23 @@
+@mixin bp-sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin bp-md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin bp-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin bp-xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}

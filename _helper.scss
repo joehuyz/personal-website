@@ -1,0 +1,30 @@
+.section {
+  position: relative;
+  background-color: rgb(34, 34, 34);
+  z-index: 9;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+
+  @include bp-sm {
+    max-width: $container-sm;
+  }
+
+  @include bp-md {
+    max-width: $container-md;
+  }
+
+  @include bp-lg {
+    max-width: $container-lg;
+  }
+
+  @include bp-xl {
+    max-width: $container-xl;
+  }
+}
+
+.tag {
+  position: relative;
+}

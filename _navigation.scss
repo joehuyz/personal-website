@@ -1,0 +1,139 @@
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all .3s;
+  background-color: rgba(0, 0, 0, .8);
+
+  @include bp-lg {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.nav-bg-color {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.nav-container {
+  width: 100%;
+  margin: auto;
+
+  @include bp-lg {
+    max-width: $container-lg;
+  }
+
+  @include bp-xl {
+    max-width: $container-xl;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 10px 50px;
+  font-size: 24px;
+  margin-left: -25px;
+
+
+  @include bp-lg {
+    margin-left: -50px;
+  }
+}
+
+.ham {
+  position: relative;
+  height: 50px;
+  width: 50px;
+
+  @include bp-lg {
+    display: none;
+  }
+}
+
+.ham-bar {
+  width: 20px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -1px;
+  transition: all .3s;
+
+  &--top {
+    transform: translateY(-5px);
+  }
+
+  &--bottom {
+    transform: translateY(5px);
+  }
+}
+
+#ham-toggle:checked ~ .ham .ham-bar--top {
+  transform: rotate(45deg);
+}
+
+#ham-toggle:checked ~ .ham .ham-bar--middle {
+  opacity: 0;
+}
+
+#ham-toggle:checked ~ .ham .ham-bar--bottom {
+  transform: rotate(-45deg);
+}
+
+#ham-toggle:checked ~ .menu-list {
+  max-height: 240px;
+}
+
+
+.menu-list {
+  list-style: none;
+  margin-right: -45px;
+  padding: 0;
+  font-size: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .5s;
+  background-color: rgba(0, 0, 0, .8);
+  
+
+  @include bp-lg {
+    position: static;
+    width: auto;
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.menu-item {
+  padding:10px 15px;
+  font-size: 24px;
+  transition: all .3s;
+
+  @include bp-lg {
+    display: inline-block;
+  }
+}
+
+.menu-link {
+  color:white;
+  padding: 8px 30px;
+  text-decoration: none;
+  transition: all .3s;
+}
