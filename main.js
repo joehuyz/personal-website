@@ -96,7 +96,7 @@ $(document).ready(function(){
       $('.skill-percent').addClass('visible');
       setTimeout(function(){
         $('.wave-1').addClass('wave-p')
-      }, 3000 * 80 / 100);
+      }, 3000 * 90 / 100);
       setTimeout(function(){
         $('.wave-2').addClass('wave-p')
       }, 3000 * 70 / 100);
@@ -111,7 +111,7 @@ $(document).ready(function(){
       }, 3000 * 10 / 100)
       setTimeout(function(){
         $('.wave-6').addClass('wave-p')
-      }, 3000 * 30 / 100)
+      }, 3000 * 60 / 100)
     }
   }
   play();
