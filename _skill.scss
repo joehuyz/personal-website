@@ -46,6 +46,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
+  z-index: 1;
 }
 
 .skill-percent {
@@ -69,6 +70,7 @@
   width: 200px;
   height: 200px;
   background-color:#ffaaa5;
+  overflow: hidden;
 
   &::before,
   &::after {
@@ -99,6 +101,7 @@
   width: 200px;
   height: 200px;
   background-color:#ffaaa5;
+  overflow: hidden;
   animation: bg-color-change 3s linear forwards;
 
   &::before,

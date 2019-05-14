@@ -108,7 +108,7 @@ $(document).ready(function(){
       }, 3000 * 50 / 100)
       setTimeout(function(){
         $('.wave-5').addClass('wave-p')
-      }, 3000 * 10 / 100)
+      }, 3000 * 20 / 100)
       setTimeout(function(){
         $('.wave-6').addClass('wave-p')
       }, 3000 * 60 / 100)

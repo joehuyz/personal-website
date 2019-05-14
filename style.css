@@ -373,7 +373,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(./picture/notebook.jpg) 50% 70%/cover no-repeat;
+  background: url(./picture/notebook.jpg) center/cover no-repeat;
   -webkit-transition: -webkit-transform 2s ease;
   transition: -webkit-transform 2s ease;
   transition: transform 2s ease;
@@ -544,6 +544,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
+  z-index: 1;
 }
 
 .skill-percent {
@@ -569,6 +570,7 @@ body {
   width: 200px;
   height: 200px;
   background-color: #ffaaa5;
+  overflow: hidden;
 }
 
 .wave::before, .wave::after {
@@ -602,6 +604,7 @@ body {
   width: 200px;
   height: 200px;
   background-color: #ffaaa5;
+  overflow: hidden;
   -webkit-animation: bg-color-change 3s linear forwards;
           animation: bg-color-change 3s linear forwards;
 }
