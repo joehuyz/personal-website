@@ -1,0 +1,171 @@
+.section-skill {
+  min-height: 600px;
+  font-size: 18px;
+  padding: 100px 0;
+  background-color: #4e515b;
+}
+
+.skill-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skill-title {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 70px 0;
+}
+
+.skill-flex-item {
+  flex-basis: 100%;
+  padding: 20px;
+
+
+  @include bp-sm {
+    flex-basis: 50%;
+  }
+
+  @include bp-lg {
+    flex-basis: 33.33%;
+    padding: 40px 20px;
+  }
+}
+
+.skill-name {
+  text-align: center;
+  padding: 1em;   
+}
+
+.skill-bubble {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 5px solid rgb(167, 167, 167);
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.skill-percent {
+  position: absolute;
+  color:rgba(0, 0, 0, 0.8);
+  font-size: 2em;
+  z-index: 30;
+  opacity: 0;
+  transition: opacity 2s;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+
+.visible {
+  opacity: 1;
+}
+
+.wave {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color:#ffaaa5;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 35%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 45%;
+    transform: translate(-50%, -70%) rotate(0);
+    animation: rotate 6s linear infinite;
+    z-index: 10;
+  }
+  
+  &::after {
+    border-radius: 47%;
+    background-color: rgba(255, 255, 255, .9);
+    transform: translate(-50%, -70%) rotate(0);
+    animation: rotate 10s linear -5s infinite;
+    z-index: 20;
+  }
+}
+
+.wave-new {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color:#ffaaa5;
+  animation: bg-color-change 3s linear forwards;
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 35%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 45%;
+    transform: translate(-50%, -70%) rotate(0);
+    animation: rotate 6s linear infinite, full-up 3s linear forwards;
+    z-index: 10;
+  }
+  
+  &::after {
+    border-radius: 48%;
+    background-color: rgba(255, 255, 255, .9);
+    transform: translate(-50%, -70%) rotate(0);
+    animation: rotate 10s linear -5s infinite, full-up 3s linear forwards;
+    z-index: 20;
+  }
+}
+
+.wave-p {
+  animation-play-state: paused;
+
+  &::before,&::after {
+    animation-play-state: running, paused;
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform: translate(-50%, -73%) rotate(180deg);
+  } 
+  100% {
+    transform: translate(-50%, -70%) rotate(360deg);
+  }
+}
+
+@keyframes full-up {
+  0% {
+    top: 35%;
+  }
+  100% {
+    top: -60%;
+  }
+}
+
+@keyframes bg-color-change {
+  0% {
+    background-color: #ffaaa5;
+  }
+  25% {
+    background-color: #ffd3b6;
+  }
+  50% {
+    background-color: #fdffab;
+  }
+  75% {
+    background-color: #a8e6cf;
+  }
+  100% {
+    background-color: #99e1e5;
+  }
+}
