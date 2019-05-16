@@ -67,12 +67,13 @@
 .my-header-str-area {
   display: flex;
   flex-direction: column;
-  flex-basis: 10em;
+  flex-basis: 11em;
   padding-bottom: 5%;
 }
 
 .my-header-string {
   flex-basis: 1.5em;
+  font-size: 1em;
   opacity: 0;
   & span  {
     animation: blink 1s step-end infinite;

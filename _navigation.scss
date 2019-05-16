@@ -40,7 +40,6 @@
 }
 
 .logo {
-  padding: 10px 50px;
   font-size: 24px;
   margin-left: -25px;
 
@@ -48,6 +47,11 @@
   @include bp-lg {
     margin-left: -50px;
   }
+}
+
+.logo-link {
+  padding: 10px 30px;
+  color: white;
 }
 
 .ham {

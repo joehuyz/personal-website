@@ -1,7 +1,8 @@
 .section-skill {
   font-size: 18px;
-  padding: 100px 0;
+  padding: 50px 0 100px 0;
   background-color: #4e515b;
+  background-image: radial-gradient( circle farthest-corner at -4% -12.9%,  rgba(74,98,110,1) 0.3%, rgba(30,33,48,1) 90.2% );
 }
 
 .skill-flex {
@@ -14,8 +15,6 @@
 .skill-title {
   flex-basis: 100%;
   text-align: center;
-  font-size: 2.5em;
-  padding: 70px 0;
 }
 
 .skill-flex-item {
@@ -35,7 +34,7 @@
 
 .skill-name {
   text-align: center;
-  padding: 1em;   
+  padding: 1em;
 }
 
 .skill-bubble {
@@ -155,6 +154,24 @@
 }
 
 @keyframes bg-color-change {
+  0% {
+    background-color: #fc9691;
+  }
+  25% {
+    background-color: #fabc92;
+  }
+  50% {
+    background-color: #f9fa92;
+  }
+  75% {
+    background-color: #8ae4c3;
+  }
+  100% {
+    background-color: #83dee2;
+  }
+}
+
+@keyframes bg-color-change-standard {
   0% {
     background-color: #ffaaa5;
   }

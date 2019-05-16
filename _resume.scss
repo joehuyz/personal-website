@@ -1,8 +1,55 @@
 .section-resume {
-  height: 100vh;
+  min-height: 600px;
+  padding: 60px 0 100px 0;
+  font-size: 18px;
 }
 
-.test-flex {
+.resume-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.resume-title {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.resume-photo {
+  flex-basis: 50%;
+  padding: 10px 20px;
+  
+  @include bp-md {
+    flex-basis: 30%;
+  }
+}
+
+.photo-name {
+  text-align: center;
+}
+
+.photo-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+}
+
+.resume-text {
+  flex-basis: 80%;
+
+  @include bp-md {
+    flex-basis: 65%;
+  }
+}
+
+.resume-text-word {
+  padding: 5px 0;
 }
