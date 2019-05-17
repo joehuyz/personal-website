@@ -1,0 +1,35 @@
+.section-contact {
+  padding: 50px 0 100px 0;
+  background-color: #636872;
+}
+
+.contact-title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-item {
+  flex-basis: 70%;
+  margin: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.input-message {
+  height: 200px;
+}
+
+.input-item-button {
+  flex-basis: 30%;
+}

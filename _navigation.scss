@@ -41,11 +41,9 @@
 
 .logo {
   font-size: 24px;
-  margin-left: -25px;
-
 
   @include bp-lg {
-    margin-left: -50px;
+    margin-left: -30px;
   }
 }
 

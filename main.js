@@ -16,14 +16,17 @@ $(document).ready(function(){
     $SkillScrollVal = $('#skill').offset().top;
   });
 
+  $('.menu-link').click(function(e){
+    e.preventDefault(); 
+    var target = $(this).attr('href'); 
+    var targetPos = $(target).offset().top;
+    $('html, body').animate({scrollTop: targetPos}, 1000); 
+  });
+
   $(window).on('load', function() {
     maskingZoomIn($scrollVal, 500);
     faded ();
   });
-
-  function scrollScreen (targetScrVal) {
-    $('html, body').animate({scrollTop: targetScrVal}, 2000);
-  }
 
   function headerStrMove () {
     $('.my-header-subs').css('top', $scrollVal);
