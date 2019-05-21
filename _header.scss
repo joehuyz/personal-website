@@ -2,23 +2,23 @@
   height: 100vh;
   overflow: hidden;
   min-height: 600px;
-  font-size: 25px;
+  font-size: 30px;
   text-shadow: 3px 3px 2px rgba(150, 150, 150, 1);
 
   @include bp-sm {
-    font-size: 32px;
-  }
-
-  @include bp-md {
     font-size: 36px;
   }
 
+  @include bp-md {
+    font-size: 42px;
+  }
+
   @include bp-lg {
-    font-size: 40px;
+    font-size: 46px;
   }
 
   @include bp-xl {
-    font-size: 42px;
+    font-size: 52px;
   }
 }
 
@@ -67,14 +67,15 @@
 .my-header-str-area {
   display: flex;
   flex-direction: column;
-  flex-basis: 11em;
+  flex-basis: 10em;
   padding-bottom: 5%;
 }
 
 .my-header-string {
+  font-family: 'Courgette', cursive;
   flex-basis: 1.5em;
   font-size: 1em;
-  opacity: 0;
+  opacity: 0; 
   & span  {
     animation: blink 1s step-end infinite;
   }

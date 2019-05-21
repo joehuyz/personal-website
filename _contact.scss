@@ -1,5 +1,5 @@
 .section-contact {
-  padding: 50px 0 100px 0;
+  padding: 50px 0 50px 0;
   background-color: #636872;
 }
 
@@ -28,8 +28,43 @@
 
 .input-message {
   height: 200px;
+
+  @include bp-md {
+    height: 300px;
+  }
 }
 
 .input-item-button {
   flex-basis: 30%;
+}
+
+.input-button {
+  background-color: #787b80;
+  border: rgb(205, 205, 205) 2px solid;
+  color:white;
+
+  &:hover {
+    background-color: #aeb2b8;
+    color:black;
+  }
+}
+
+.contact-icon {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-link {
+  margin: 0 20px;
+
+  &:hover .icon-stlye{
+    color: black;
+  }
+}
+
+.icon-stlye {
+  font-size: 40px; 
+  color: white;
+  transition: all .3s;
 }

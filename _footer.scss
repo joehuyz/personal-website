@@ -1,6 +1,10 @@
 .section-my-footer {
   padding: 50px 0;
   background-color: #303139;
+
+  @include bp-md {
+    padding: 70px 0;
+  }
 }
 
 .footer-copyright {

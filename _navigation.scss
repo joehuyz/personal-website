@@ -41,6 +41,8 @@
 
 .logo {
   font-size: 24px;
+  font-family: 'Satisfy', cursive;
+  transition: color .3s;
 
   @include bp-lg {
     margin-left: -30px;
@@ -50,6 +52,10 @@
 .logo-link {
   padding: 10px 30px;
   color: white;
+
+  .logo &:hover {
+    color: rgb(163, 222, 250);
+  }
 }
 
 .ham {
@@ -138,4 +144,12 @@
   padding: 8px 30px;
   text-decoration: none;
   transition: all .3s;
+
+  &:hover {
+    color: rgb(163, 222, 250);
+  }
+}
+
+.active {
+  color: rgb(163, 222, 250);
 }

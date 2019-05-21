@@ -2,31 +2,47 @@ $(document).ready(function(){
   
   var $scrollVal = $(window).scrollTop();
   var $windowWidthVal = $(window).width();
-  var $SkillScrollVal = $('#skill').offset().top;
+  var $skillScrollVal = $('#skill').offset().top;
+  var $windowHeightVal = $(window).height();
 
   $(window).scroll(function(){
     $scrollVal = $(this).scrollTop();
     showNavBar ($scrollVal);
     skillPlay ($scrollVal);
-    console.log($scrollVal ,$windowWidthVal ,$SkillScrollVal);
+    navBarTrack ();
+    console.log($scrollVal ,$windowWidthVal ,$skillScrollVal);
   });
 
   $(window).resize(function(){
     $windowWidthVal = $(this).width();
-    $SkillScrollVal = $('#skill').offset().top;
+    $skillScrollVal = $('#skill').offset().top;
+    $windowHeightVal = $(this).height();
   });
 
   $('.menu-link').click(function(e){
     e.preventDefault(); 
-    var target = $(this).attr('href'); 
-    var targetPos = $(target).offset().top;
-    $('html, body').animate({scrollTop: targetPos}, 1000); 
+    var $target = $(this).attr('href'); 
+    var $targetPos = $($target).offset().top;
+    $('html, body').animate({scrollTop: $targetPos + 1}, 1000); 
   });
 
   $(window).on('load', function() {
     maskingZoomIn($scrollVal, 500);
     faded ();
   });
+
+  function navBarTrack () {
+    $('.menu-link').each(function() {
+      var $target = $(this).attr('href'); 
+      var $targetPos = $($target).offset().top;
+      var $targetHeight = $($target).outerHeight();
+      if ($targetPos <= $scrollVal && $scrollVal < ($targetPos + $targetHeight) ) {
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active');
+      }
+    });
+  }
 
   function headerStrMove () {
     $('.my-header-subs').css('top', $scrollVal);
@@ -94,7 +110,7 @@ $(document).ready(function(){
   }
 
   function skillPlay (scrollVal) {
-    if (scrollVal >= $SkillScrollVal - 150) {
+    if (scrollVal >= $skillScrollVal - 150) {
       $('.wave').removeClass('wave').addClass('wave-new');
       $('.skill-percent').addClass('visible');
       setTimeout(function(){
@@ -118,6 +134,8 @@ $(document).ready(function(){
     }
   }
   play();
+  showNavBar ($scrollVal);
+  skillPlay ($scrollVal);
 
 
   

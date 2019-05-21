@@ -8,6 +8,7 @@ body {
   margin: 0;
   color: white;
   background-color: #222222;
+  font-family: 'PingFang TC';
 }
 
 h1 {
@@ -60,10 +61,6 @@ a {
   .container {
     max-width: 1140px;
   }
-}
-
-.tag {
-  position: relative;
 }
 
 .loading-page {
@@ -241,6 +238,9 @@ a {
 
 .logo {
   font-size: 24px;
+  font-family: 'Satisfy', cursive;
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 
 @media (min-width: 992px) {
@@ -252,6 +252,10 @@ a {
 .logo-link {
   padding: 10px 30px;
   color: white;
+}
+
+.logo .logo-link:hover {
+  color: #a3defa;
 }
 
 .ham {
@@ -354,35 +358,43 @@ a {
   transition: all .3s;
 }
 
+.menu-link:hover {
+  color: #a3defa;
+}
+
+.active {
+  color: #a3defa;
+}
+
 .section-my-header {
   height: 100vh;
   overflow: hidden;
   min-height: 600px;
-  font-size: 25px;
+  font-size: 30px;
   text-shadow: 3px 3px 2px #969696;
 }
 
 @media (min-width: 576px) {
   .section-my-header {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
 @media (min-width: 768px) {
   .section-my-header {
-    font-size: 36px;
+    font-size: 42px;
   }
 }
 
 @media (min-width: 992px) {
   .section-my-header {
-    font-size: 40px;
+    font-size: 46px;
   }
 }
 
 @media (min-width: 1200px) {
   .section-my-header {
-    font-size: 42px;
+    font-size: 52px;
   }
 }
 
@@ -452,12 +464,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 11em;
-      flex-basis: 11em;
+  -ms-flex-preferred-size: 10em;
+      flex-basis: 10em;
   padding-bottom: 5%;
 }
 
 .my-header-string {
+  font-family: 'Courgette', cursive;
   -ms-flex-preferred-size: 1.5em;
       flex-basis: 1.5em;
   font-size: 1em;
@@ -941,7 +954,7 @@ a {
 }
 
 .section-contact {
-  padding: 50px 0 100px 0;
+  padding: 50px 0 50px 0;
   background-color: #636872;
 }
 
@@ -978,14 +991,62 @@ a {
   height: 200px;
 }
 
+@media (min-width: 768px) {
+  .input-message {
+    height: 300px;
+  }
+}
+
 .input-item-button {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
 
+.input-button {
+  background-color: #787b80;
+  border: #cdcdcd 2px solid;
+  color: white;
+}
+
+.input-button:hover {
+  background-color: #aeb2b8;
+  color: black;
+}
+
+.contact-icon {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icon-link {
+  margin: 0 20px;
+}
+
+.icon-link:hover .icon-stlye {
+  color: black;
+}
+
+.icon-stlye {
+  font-size: 40px;
+  color: white;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
 .section-my-footer {
   padding: 50px 0;
   background-color: #303139;
+}
+
+@media (min-width: 768px) {
+  .section-my-footer {
+    padding: 70px 0;
+  }
 }
 
 .footer-copyright {
