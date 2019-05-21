@@ -136,7 +136,6 @@ $(document).ready(function(){
   play();
   showNavBar ($scrollVal);
   skillPlay ($scrollVal);
-
-
+  navBarTrack ();
   
 })
